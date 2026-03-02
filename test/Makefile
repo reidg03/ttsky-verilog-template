@@ -6,7 +6,7 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = CarryPropArrMul.v FullAdder.v MulAdder.v tt_um_reidg03_gmult.v
 
 ifneq ($(GATES),yes)
 
