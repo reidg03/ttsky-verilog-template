@@ -35,4 +35,12 @@ By connecting many 1-bit multiply adders in an array, we can multiply two binary
 
 # How to test
 
-idk
+Inputs:
+- A[3:0]: store in ui_in[7:4]
+- B[3:0]: store in ui_in[3:0]
+Outputs:
+- P[7:0]: output from uo_out[7:0]
+
+The multiplier takes in two 4-bit values and outputs one 8-bit value. The inputs and outputs are unsigned binary numbers, and do not handle negatives. This design is purely combinational logic, meaning that the output will be ready in a single clock cycle. 
+
+The testbench tests random multiplications as well as corner cases, including multiplying by zero and multiplying the largest numbers possible. 

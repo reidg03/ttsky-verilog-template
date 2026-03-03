@@ -44,3 +44,13 @@ async def test_project(dut):
     dut.ui_in.value = (13 << 4) | 7
     await ClockCycles(dut.clk, 1)
     assert dut.uo_out.value == 91
+
+    # Test 5: 15 * 15
+    dut.ui_in.value = (15 << 4) | 15
+    await ClockCycles(dut.clk, 1)
+    assert dut.uo_out.value == 225
+
+    # Test 6: 14 * 0
+    dut.ui_in.value = (14 << 4) | 0
+    await ClockCycles(dut.clk, 1)
+    assert dut.uo_out.value == 0
