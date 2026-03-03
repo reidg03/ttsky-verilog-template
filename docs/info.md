@@ -38,6 +38,7 @@ By connecting many 1-bit multiply adders in an array, we can multiply two binary
 Inputs:
 - A[3:0]: store in ui_in[7:4]
 - B[3:0]: store in ui_in[3:0]
+
 Outputs:
 - P[7:0]: output from uo_out[7:0]
 
