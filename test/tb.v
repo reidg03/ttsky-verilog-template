@@ -61,7 +61,8 @@ module tb ();
     #5;
      $display("A=13 B=7 -> P=%d", uo_out);
      assert(uo_out == 8'd91)
-     
+
+        $finish
   end
    
   // Replace tt_um_example with your module name:
