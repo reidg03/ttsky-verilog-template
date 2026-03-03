@@ -42,12 +42,26 @@ module tb ();
     ui_in = {4'd3, 4'd2};
     #5;
     $display("A=3 B=2 -> P=%d", uo_out);
+     assert(uo_out == 8'd6)
 
     // Test case 2: 4 * 5
     ui_in = {4'd4, 4'd5};
     #5;
     $display("A=4 B=5 -> P=%d", uo_out);
+     assert(uo_out == 8'd20)
 
+   // Test case 3: 12 * 15
+        ui_in = {4'd12, 4'd15};
+    #5;
+     $display("A=12 B=15 -> P=%d", uo_out);
+     assert(uo_out == 8'd180)
+
+   // Test case 4: 13 * 7
+        ui_in = {4'd13, 4'd7};
+    #5;
+     $display("A=13 B=7 -> P=%d", uo_out);
+     assert(uo_out == 8'd91)
+     
     // Finish simulation
     $finish;
   end
