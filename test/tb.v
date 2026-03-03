@@ -42,25 +42,25 @@ module tb ();
     ui_in = {4'd3, 4'd2};
     #5;
     $display("A=3 B=2 -> P=%d", uo_out);
-     assert(uo_out == 8'd6);
+     assert(uo_out == 8'd6) else $fatal(1, "3*2 failed");
 
     // Test case 2: 4 * 5
     ui_in = {4'd4, 4'd5};
     #5;
     $display("A=4 B=5 -> P=%d", uo_out);
-     assert(uo_out == 8'd20);
+     assert(uo_out == 8'd20) else $fatal(1, "4*5 failed");
 
    // Test case 3: 12 * 15
         ui_in = {4'd12, 4'd15};
     #5;
      $display("A=12 B=15 -> P=%d", uo_out);
-     assert($unsigned(uo_out) == 8'd180);
+     assert($unsigned(uo_out) == 8'd180) else $fatal(1, "12*15 failed");
 
    // Test case 4: 13 * 7
         ui_in = {4'd13, 4'd7};
     #5;
      $display("A=13 B=7 -> P=%d", uo_out);
-     assert(uo_out == 8'd91);
+     assert(uo_out == 8'd91) else $fatal(1, "13*7 failed");
 
     $finish;
   end
