@@ -4,8 +4,7 @@ module MulAdder(
     input Sin,
     input Cin,
     output Sout,
-    output Cout,
-    output Xout,
+    output Cout
 );
 
 FullAdder fa (
