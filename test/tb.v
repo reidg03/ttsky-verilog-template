@@ -27,6 +27,31 @@ module tb ();
   wire VGND = 1'b0;
 `endif
 
+
+   //TESTING
+  initial begin
+    // Start with reset low
+    rst_n = 0;
+    ena   = 1;
+    ui_in = 8'b00000000;
+    uio_in = 8'b00000000;
+
+    #5 rst_n = 1;  // release reset
+
+    // Test case 1: 3 * 2
+    ui_in = {4'd3, 4'd2};
+    #5;
+    $display("A=3 B=2 -> P=%d", uo_out);
+
+    // Test case 2: 4 * 5
+    ui_in = {4'd4, 4'd5};
+    #5;
+    $display("A=4 B=5 -> P=%d", uo_out);
+
+    // Finish simulation
+    $finish;
+  end
+   
   // Replace tt_um_example with your module name:
   tt_um_reidg03_gmult user_project (
 
