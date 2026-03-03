@@ -54,7 +54,7 @@ module tb ();
         ui_in = {4'd12, 4'd15};
     #5;
      $display("A=12 B=15 -> P=%d", uo_out);
-     assert(uo_out == 8'd180)
+     assert($unsigned(uo_out) == 8'd180)
 
    // Test case 4: 13 * 7
         ui_in = {4'd13, 4'd7};
