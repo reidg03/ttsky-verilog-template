@@ -35,7 +35,7 @@ MulAdder m22(.X(A[2]), .Y(B[2]), .Sin(s13), .Cin(c21), .Sout(s22), .Cout(c22));
 MulAdder m23(.X(A[3]), .Y(B[2]), .Sin(c13), .Cin(c22), .Sout(s23), .Cout(c23));
 
 //row 4
-MulAdder m30(.X(A[0]), .Y(B[3]), .Sin(s21), .Cin(1'b0), .Sout(s30), .Cout(s30));
+    MulAdder m30(.X(A[0]), .Y(B[3]), .Sin(s21), .Cin(1'b0), .Sout(s30), .Cout(c30));
 MulAdder m31(.X(A[1]), .Y(B[3]), .Sin(s22), .Cin(c30), .Sout(s31), .Cout(c31));
 MulAdder m32(.X(A[2]), .Y(B[3]), .Sin(s23), .Cin(c31), .Sout(s32), .Cout(c32));
 MulAdder m33(.X(A[3]), .Y(B[3]), .Sin(c23), .Cin(c32), .Sout(s33), .Cout(c33));
@@ -51,3 +51,4 @@ assign P[6] = s33;
 assign P[7] = c33;
 
 endmodule
+
