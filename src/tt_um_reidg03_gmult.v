@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_reidg03_gmult.v (
+module tt_um_reidg03_gmult (
     input  wire [7:0] ui_in,
     output wire [7:0] uo_out,
     input  wire [7:0] uio_in,
@@ -43,3 +43,4 @@ wire _unused = &{uio_in, ena, clk, rst_n, 1'b0};
 
 
 endmodule
+
